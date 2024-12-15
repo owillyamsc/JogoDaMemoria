@@ -1,0 +1,91 @@
+* {
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+section>h3{
+    margin: 40px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 60%;
+}
+
+table, td, th{
+    margin: auto;
+    border: 1px solid black;
+}
+
+th, td{
+    width: 20%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+section{
+    text-align: center;
+}
+
+section>h2{
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.logo{
+    padding-top: 30px;
+    text-align: center;
+    display: flex;
+}
+
+div h2{
+    margin: auto;
+    margin-left: 0;
+    text-align: center;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div img{
+    margin-left: auto;
+    width: 150px;
+}
+
+.text>p{
+    font-size: 18px;
+    width: 750px;
+    margin: auto;
+    margin-bottom: 90px;
+}
+
+.msg{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    text-align: center;
+    font-size: 25px;
+}
+
+footer{
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    padding: 50px;
+    border: 1px black solid;
+    width: 70%;
+    display: flex;
+}
+
+footer img{
+    width: 90px;
+}
+
+footer div{
+    margin: 10px;
+}
+
+footer div p{
+    font-size: 15px;
+    font-weight: bold;
+}

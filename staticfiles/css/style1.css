@@ -1,0 +1,341 @@
+* {
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background-color: rgb(135, 73, 73);
+}
+
+.logo{
+    padding-top: 30px;
+    text-align: center;
+    display: flex;
+}
+
+.regras{
+    padding: 50px;
+    margin: auto;
+    margin-top: 50px;
+    width: 70%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.regras div{
+    margin-top: 10px;
+    display: flex;
+}
+
+.regras div img{
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 180px;
+}
+
+.regras div p{
+    text-align: left;
+}
+
+.regras h4{
+    font-size: 20px;
+}
+
+.regras p{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+div h2{
+    margin: auto;
+    margin-left: 0;
+    text-align: center;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div img{
+    margin-left: auto;
+    width: 150px;
+}
+
+.header-table{
+    margin: auto;
+    margin-top: 50px;
+    width: 70%;
+    font-size: 20px;
+    display: flex;
+}
+
+.header-table p{
+    margin: auto;
+    font-weight: bold;
+}
+
+section{
+    background-image: url(../imagens/ches-bg.jpg);
+    backdrop-filter: blur(10px);
+    border: 3px solid black;
+    margin: auto;
+    display: flex;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 10px; 
+}
+
+section:first-of-type{
+    padding-top: 50px;
+    padding-bottom: 25px;
+    margin-top: 50px;
+}
+
+section:last-of-type{
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+.carta{
+    margin: auto;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 140px;
+    height: 190px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.carta:hover{
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.card1{
+    background-image: url(../imagens/horseback.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card2{
+    background-image: url(../imagens/horseback.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card3{
+    background-image: url(../imagens/horseback.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card4{
+    background-image: url(../imagens/horseback.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card5{
+    background-image: url(../imagens/horseback.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card6{
+    background-image: url(../imagens/horseback.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card7{
+    background-image: url(../imagens/horseback.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card8{
+    background-image: url(../imagens/horseback.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card9{
+    background-image: url(../imagens/horseback.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card10{
+    background-image: url(../imagens/horseback.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card11{
+    background-image: url(../imagens/horseback.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.card12{
+    background-image: url(../imagens/horseback.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.msg{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    text-align: center;
+    font-size: 25px;
+}
+
+form>.msg{
+    margin: auto;
+    margin-bottom: 40px;
+    width: 600px;
+}
+
+form{
+    border: 1px solid black;
+    width: 700px;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+}
+
+form>div{
+    margin: auto;
+    display: flex;
+}
+
+form>div>label{
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.elemento{
+    margin: auto;
+}
+
+.nome{
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 1px;
+    width: 400px;
+}
+
+.nome:hover{
+    cursor: pointer;
+}
+
+.enviar{
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(31, 31, 31);
+}
+
+.enviar:hover{
+    cursor: pointer;
+    background-color: black;
+}
+
+footer{
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 50px;
+    border: 1px black solid;
+    width: 70%;
+    display: flex;
+}
+
+footer img{
+    width: 90px;
+}
+
+footer div{
+    margin: auto;
+}
+
+footer div p{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+
+    .regras div{
+        margin-top: 10px;
+        display: block;
+    }
+
+    .carta{
+        margin: auto;
+        margin-bottom: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 80px;
+        height: 100px;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+
+    section{
+        background-image: url(../imagens/ches-bg.jpg);
+        backdrop-filter: blur(10px);
+        border: 3px solid black;
+        margin: auto;
+        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 2fr); 
+        gap: 10px; 
+    }
+
+    footer{
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        padding: 50px;
+        border: 1px black solid;
+        display: block;
+    }
+
+    footer div{
+        margin: auto;
+        margin-top: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 1200px) {
+
+    .carta{
+        margin: auto;
+        margin-bottom: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 110px;
+        height: 140px;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+
+    section{
+        background-image: url(../imagens/ches-bg.jpg);
+        backdrop-filter: blur(10px);
+        border: 3px solid black;
+        margin: auto;
+        display: flex;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); 
+        gap: 10px; 
+    }
+
+}

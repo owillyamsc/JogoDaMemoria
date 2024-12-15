@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da memória</title>
+    <link rel="stylesheet" href="{% static "css/style1.css" %}">
+</head>
+<body>
+    <div class="navegacao" style="display: flex; margin: auto; width: 1150px">
+        
+        <nav class="secoes">
+            <ul style="display: flex; list-style-type: none; font-size: 20px; font-weight: bold">
+                {% if user.is_authenticated %}
+                    <li style="margin: 40px; margin-left: 0;">
+                        <form class="logout" method="post" action="{% url 'logout' %}" 
+                        style="padding: 0; margin: 0; width: 60px;
+                            border: none;">
+                            {% csrf_token %}
+                            <button type="submit" 
+                            style="background-color: white; font-size: 20px; text-decoration: underline;
+                                   cursor: pointer; font-weight: bold">Logout</button>
+                        </form>
+                    </li>
+                {% endif %}
+                <li style="margin: 40px">
+                    <a href="{% url 'admin:login' %}">Admin</a>
+                </li>
+                <li style="margin: 40px;">
+                    <a href="{% url 'rankings' %}">Rankigns</a>
+                </li>
+            </ul>
+        </nav>
+        {% if user.is_authenticated %}
+            <p style="margin: 40px; margin-left: auto; font-size: 20px; font-weight: bold;"> Olá, {{ user.username }}!</p>
+        {% else %}
+            <p style="margin: 40px; margin left: auto;">Faça Login!</p>
+        {% endif %}
+    </div>
+
+    <div class="logo">
+        <img src="/static/imagens/brain.png" alt="Brain.png">
+        <h2>Memory Chess</h2>
+     </div>
+
+    <div class="regras">
+        <h4>Regras do jogo:</h4>
+        <div>
+            <img src="/static/imagens/bookrules.jpg" alt="Rules.png">
+            <p>
+                1. Objetivo: Encontre todos os pares de cartas iguais. <br>
+                2. Preparação: Cartas são colocadas de cabeça para baixo em uma grade. <br>
+                3. Jogada: Vire duas cartas por vez. Se forem iguais, ganhe um ponto. Caso contrário, vire-as de volta. <br>
+                4. Memorização: Lembre-se das cartas que você virou para fazer as combinações. <br>
+                5. Continuação: O jogo continua até todas as cartas serem combinadas. <br>
+                6. Estratégia: Concentre-se e lembre-se das posições das cartas. <br>
+                7. Variantes: Existem diferentes tamanhos de grade e regras adicionais. <br>
+                8. Jogo Online: Encontre todos os pares o mais rápido possível. <br>
+            </p>  
+        </div>
+        
+     </div>
+
+    
+    <div class="header-table">
+        <p>Tentativas:</p>
+        <p>Acertos:</p>
+        <p>Erros:</p>
+    </div>
+
+    <main>
+        <section>
+            <div class="carta card1" data-valor="1" data-img-url="{% static '/imagens/sketche2.jpg' %}"></div>
+            <div class="carta card2" data-valor="a2" data-img-url="{% static '/imagens/sketche7.jpg' %}"></div>
+            <div class="carta card3" data-valor="ab3" data-img-url="{% static '/imagens/sketche6.jpg' %}"></div>
+            <div class="carta card4" data-valor="abc4" data-img-url="{% static '/imagens/sketche4.jpg' %}"></div>
+            <div class="carta card5" data-valor="abcd5" data-img-url="{% static '/imagens/sketche8.jpg' %}"></div>
+            <div class="carta card6" data-valor="abcde6" data-img-url="{% static '/imagens/sketche5.jpg' %}"></div>
+            <div class="carta card7" data-valor="1" data-img-url="{% static '/imagens/sketche2.jpg' %}"></div>
+            <div class="carta card8" data-valor="a2" data-img-url="{% static '/imagens/sketche7.jpg' %}"></div>
+            <div class="carta card9" data-valor="ab3" data-img-url="{% static '/imagens/sketche6.jpg' %}"></div>
+            <div class="carta card10" data-valor="abc4" data-img-url="{% static '/imagens/sketche4.jpg' %}"></div>
+            <div class="carta card11" data-valor="abcd5" data-img-url="{% static '/imagens/sketche8.jpg' %}"></div>
+            <div class="carta card12" data-valor="abcde6" data-img-url="{% static '/imagens/sketche5.jpg' %}"></div>
+        </section>
+    </main>
+    
+    <div class="msg">
+        <h4>Jogo da memória com tema xadrez!</h4>
+    </div>
+
+    <form action='{% url 'save' %}' method="POST">
+    <div class="msg">
+        <h4>Terminou a partida? para registrá-la no ranking pressione o botão abaixo.</h4>
+    </div>
+        <div>
+            {% csrf_token %}
+            <input type="number"id='tentativas' name='tentativas' class="elemento" value='' style="display: none">
+            <input type="datetime-local" id='dataPartida' name='dataPartida' class="elemento" value='' style="display: none">
+            <input type="submit" value="Registrar Partida" class='enviar elemento'>
+        </div>
+        
+    </form>
+
+    <div class="msg">
+        <h4>Clique <a href="{%url 'rankings' %}">aqui</a> para acessar a página de rankings do jogo.</h4>
+    </div>
+    <footer>
+        <img src="/static/imagens/horse-icon-removebg-preview.png" alt="Horse.png">
+
+        <div>
+            <p>Todos os direitos reservados ⓒ</p>
+        </div>
+
+        <div>
+            <p> 
+                Integrantes: 
+                Fred Willamy da Cruz Silva, <br>
+                Snanda Sabrina Fernandes de Oliveira, <br>
+                Gislaine dos Santos Lima
+            </p>
+        </div>
+        <div>
+            <p> 
+                Disciplina: Programação para Internet <br>
+                Professor: Marcelo Figueiredo Barbosa Júnior <br>
+                IFRN - Campus Santa Cruz/RN <br>
+            </p>
+        </div>
+        <div class="capa" data-img-url="{% static '/imagens/horseback.jpg' %}"></div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static "js/script.js" %}"></script>
+</body>
+</html>
